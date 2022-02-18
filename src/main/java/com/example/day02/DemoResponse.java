@@ -4,6 +4,15 @@ public class DemoResponse{
 	private int code;
 	private String message;
 
+	//add default constructor for support file that was created from JSON generation
+	public DemoResponse() {
+	}
+
+	public DemoResponse(int code, String message) {
+		this.code = code;
+		this.message = message;
+	}
+
 	public void setCode(int code){
 		this.code = code;
 	}

@@ -13,7 +13,7 @@ public class DemoController {
 
     @GetMapping("/demo/{id}")
     public DemoResponse xxxx(@PathVariable int id){
-        demoService.process(id);
-        return new DemoResponse();
+        String result = demoService.process(id);
+        return new DemoResponse(id, result);
     }
 }
