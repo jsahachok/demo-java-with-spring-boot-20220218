@@ -9,6 +9,6 @@ public class DemoController {
 
     @GetMapping("/demo/{id}")
     public DemoResponse xxxx(@PathVariable int id){
-        return null;
+        return new DemoResponse();
     }
 }
