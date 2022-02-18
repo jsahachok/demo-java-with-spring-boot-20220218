@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    @Autowired
+
     private DemoService demoService;
+
+    @Autowired
+    public DemoController(DemoService demoService) {
+        this.demoService = demoService;
+    }
+
 
     @GetMapping("/demo/{id}")
     public DemoResponse xxxx(@PathVariable int id){
