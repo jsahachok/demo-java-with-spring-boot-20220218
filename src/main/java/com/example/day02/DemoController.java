@@ -10,12 +10,10 @@ public class DemoController {
 
 
     private DemoService demoService;
-
     @Autowired
-    public DemoController(DemoService demoService) {
+    public void setDemoService(DemoService demoService) {
         this.demoService = demoService;
     }
-
 
     @GetMapping("/demo/{id}")
     public DemoResponse xxxx(@PathVariable int id){
